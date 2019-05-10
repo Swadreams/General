@@ -38,14 +38,14 @@
             }
 
             for(i=0; i < slides.length; i++) {
-                // slides[i].style.display = "none";
-                slides[i].querySelector('.slide-text').classList.remove('swapnil');                
-                slides[i].querySelector('.slide-text').classList.remove('linpaws');                
+                slides[i].style.display = "none";
+                slides[i].querySelector('.slide-text').classList.remove('animation1');
+                slides[i].querySelector('.slide-text').classList.remove('animation2');
             }
 
-            //slides[slideIndex - 1].style.display = 'flex';
-            slides[slideIndex].querySelector('.slide-text').classList.add('linpaws');
-            slides[slideIndex - 1].querySelector('.slide-text').classList.add('swapnil');
+            slides[slideIndex - 1].style.display = 'block';
+            slides[slideIndex].querySelector('.slide-text').classList.add('animation2');
+            slides[slideIndex - 1].querySelector('.slide-text').classList.add('animation1');
             this.init.slideIndex = slideIndex;
         }
     }

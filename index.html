@@ -12,44 +12,28 @@
                 margin: 0;
                 padding: 0;
                 display: block;
-                height: 250px;
-                text-align: center;                
+                height: 500px;
+                text-align: center;
+                overflow: hidden;                
             }
             .slide {
-                /* padding-top: 100px; */
+                padding-top: 250px;
                 background-image : url("img/img1.jpg");
                 height: 100%;
-                display: flex;
+                /* display: flex; */
                 text-align: center;
                 width: 100%;
-                justify-content: center;
-                align-items: center;
+                /* justify-content: center;
+                align-items: center; */
             }
 
             .btn-arrow {
                 position: absolute;
-                top: 100px;
+                top: 250px;
             }
 
             #nextBtn {
                right: 0px;
-            }
-
-            .column {
-                width: 25%;
-                float: left;                
-                box-sizing: border-box;
-            }
-
-            .column ul {
-                display: block;
-                padding: 25px;
-                background-color: lightcyan;
-            }
-
-            .row {
-                clear: both;
-                width: 100%;
             }
 
             .slide-text {
@@ -97,19 +81,37 @@
             } */
 
 
-            .swapnil {
+            .animation1 {
                 /* -webkit-animation-name: animation1;
                 -webkit-animation-duration: 4s;  */
                 animation-name: animation1;
                 animation-duration: 2s;              
             }
-            .linpaws {
+            .animation2 {
                 /* -webkit-animation-name: animation1;
                 -webkit-animation-duration: 4s;  */
                 animation-name: animation2;
                 animation-duration: 2s;              
             }
             
+
+            .col-container {
+                display: table;
+                width: 100%;
+                background-color: aquamarine;
+            }
+            .col {
+                display: table-cell;
+                padding: 50px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                .col { 
+                    display: block;
+                    width: 100%;
+                }
+            }
+
         </style>
     </head>
     <body>
@@ -137,60 +139,37 @@
                 <div class="slide-text">
                     <h2>Heading Carousel 4</h2> 
                     <div>Subheading</div>
-                </div>                
+                </div>
             </article>
-            <!-- <ul>
-                <li class="slide">
-                    <h2>Heading Carousel 1</h2> 
-                    <div>Subheading</div>
-                </li>
-                <li class="slide">
-                    <h2>Heading Carousel 2</h2> 
-                    <div>Subheading</div>
-                </li>
-                <li class="slide">
-                    <h2>Heading Carousel 3</h2> 
-                    <div>Subheading</div>
-                </li>
-            </ul> -->
         </div>
         <button class="btn-arrow" id="prevBtn">&#10094</button>
         <button class="btn-arrow" id="nextBtn">&#10095</button>
 
-
-        <div class="row">        
-        <div class="column">
-            <ul>
+        <div class="col-container">
+            <ul class="col">
                 <li>List Item 1</li>
                 <li>List Item 2</li>
                 <li>List Item 3</li>
                 <li>List Item 4</li>
             </ul>
-        </div>
-        <div class="column">
-            <ul>
+            <ul class="col">
                 <li>List Item 1</li>
                 <li>List Item 2</li>
                 <li>List Item 3</li>
                 <li>List Item 4</li>
             </ul>
-        </div>
-        <div class="column">
-            <ul>
+            <ul class="col">
                 <li>List Item 1</li>
                 <li>List Item 2</li>
-                <li>List Item 3</li>            
+                <li>List Item 3</li>
             </ul>
-        </div>
-        <div class="column">
-            <ul>
+            <ul class="col">
                 <li>List Item 1</li>
                 <li>List Item 2</li>
                 <li>List Item 3</li>
                 <li>List Item 4</li>
             </ul>
-        </div>
-        </div>
+          </div>
 
         <script src="script.js">
         </script>
