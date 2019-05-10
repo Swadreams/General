@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .carousel {
+                width: 100%;
+                background-color: lightgray;
+                margin: 0;
+                padding: 0;
+                display: block;
+                height: 250px;
+                text-align: center;                
+            }
+            .slide {
+                /* padding-top: 100px; */
+                background-image : url("img/img1.jpg");
+                height: 100%;
+                display: flex;
+                text-align: center;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .btn-arrow {
+                position: absolute;
+                top: 100px;
+            }
+
+            #nextBtn {
+               right: 0px;
+            }
+
+            .column {
+                width: 25%;
+                float: left;                
+                box-sizing: border-box;
+            }
+
+            .column ul {
+                display: block;
+                padding: 25px;
+                background-color: lightcyan;
+            }
+
+            .row {
+                clear: both;
+                width: 100%;
+            }
+
+            .slide-text {
+                width: 100%;
+            }
+
+            @media screen and (max-width : 768px) {
+                .column {
+                    width: 33%;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                .column {
+                    width: 100%;
+                }
+            }
+
+            @keyframes animation1 {
+                from {
+                    display: flex;
+                    margin-left: 100%;
+                }
+                to {
+                    margin-left: 0;                    
+                }
+            }
+            @keyframes animation2 {
+                from {
+                    margin-left: 0;
+                }
+                to {
+                    margin-left: -120%;
+                    display: none;
+                }
+            }
+
+            /* @-webkit-keyframes example {
+                from {
+                    margin-left: 100%;
+                }
+                to {
+                    margin-left: 0;
+                }
+            } */
+
+
+            .swapnil {
+                /* -webkit-animation-name: animation1;
+                -webkit-animation-duration: 4s;  */
+                animation-name: animation1;
+                animation-duration: 2s;              
+            }
+            .linpaws {
+                /* -webkit-animation-name: animation1;
+                -webkit-animation-duration: 4s;  */
+                animation-name: animation2;
+                animation-duration: 2s;              
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <div class="carousel">
+            <article class="slide">
+                <div class="slide-text">
+                    <h2>Heading Carousel 1</h2> 
+                    <div>Subheading</div>
+                </div>                
+            </article>
+            <article class="slide">
+                <div class="slide-text">
+                    <h2>Heading Carousel 2</h2> 
+                    <div>Subheading</div>
+                </div>                
+            </article>
+            <article class="slide">
+                <div class="slide-text">
+                    <h2>Heading Carousel 3</h2> 
+                    <div>Subheading</div>
+                </div>                
+            </article>
+            <article class="slide">
+                <div class="slide-text">
+                    <h2>Heading Carousel 4</h2> 
+                    <div>Subheading</div>
+                </div>                
+            </article>
+            <!-- <ul>
+                <li class="slide">
+                    <h2>Heading Carousel 1</h2> 
+                    <div>Subheading</div>
+                </li>
+                <li class="slide">
+                    <h2>Heading Carousel 2</h2> 
+                    <div>Subheading</div>
+                </li>
+                <li class="slide">
+                    <h2>Heading Carousel 3</h2> 
+                    <div>Subheading</div>
+                </li>
+            </ul> -->
+        </div>
+        <button class="btn-arrow" id="prevBtn">&#10094</button>
+        <button class="btn-arrow" id="nextBtn">&#10095</button>
+
+
+        <div class="row">        
+        <div class="column">
+            <ul>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+                <li>List Item 4</li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+                <li>List Item 4</li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>            
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+                <li>List Item 4</li>
+            </ul>
+        </div>
+        </div>
+
+        <script src="script.js">
+        </script>
+    </body>
+</html>
